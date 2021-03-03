@@ -11,3 +11,7 @@ grep -rnw '\[02-03-2021 17:41:[[:digit:]]\{2\}\.[[:digit:]]\{1,3\}\] (Handler.ja
 #SERVER: osbServer_01 [DEBUG] [02-03-2021 17:41:46.388] (Handler.java:55) - [ID: 6d994c6e-b9bd-43db-8389-955301b8f868] 
 #SERVER: osbServer_01 [DEBUG] [02-03-2021 17:41:46.388] (Handler.java:55) - [ID: 6d994c6e-b9bd-43db-8389-955301b8f868] 
 
+
+#SED
+#con este comando se buscará desde la linea 123 deñ archivo file.txt hasta la linea 1234 , es necesario colocar la p
+sed -n '123,1234p' file.txt
