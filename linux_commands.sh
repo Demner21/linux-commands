@@ -13,5 +13,13 @@ grep -rnw '\[02-03-2021 17:41:[[:digit:]]\{2\}\.[[:digit:]]\{1,3\}\] (Handler.ja
 
 
 #SED
-#con este comando se buscará desde la linea 123 deñ archivo file.txt hasta la linea 1234 , es necesario colocar la p
+#con este comando se buscará desde la linea 123 deL archivo file.txt hasta la linea 1234 , es necesario colocar la p
 sed -n '123,1234p' file.txt
+
+#FIND CON SED
+#CON ESTE COMANDO SE BUSCARÁ EN LA CARPETA ACTUAL TODOS LOS ARCHIVOS pom.xml  Y DENTRO DE ELLOS SE BUSCARÁ EL STRING ${buildReleaseVersion}
+#EL CUAL SERÁ REEMPLAZADO POR 1.0.0
+find .  -name 'pom.xml' -exec sed -i -e 's/${buildReleaseVersion}/1.0.0/g' {} \;
+
+#en vim: reemplazar un string:
+:%s/<search_string>/<replace_string>/g
