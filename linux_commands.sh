@@ -23,3 +23,9 @@ find .  -name 'pom.xml' -exec sed -i -e 's/${buildReleaseVersion}/1.0.0/g' {} \;
 
 #en vim: reemplazar un string:
 :%s/<search_string>/<replace_string>/g
+
+#REEMPLAZAR TEXTO EN UN ARCHIVO CON EL COMANDO SED
+#con este comando se reemplazará el texto TEXTO_A con TEMP
+sed -i -e 's/TEXTO_A/TEMP/g' name_file
+
+
