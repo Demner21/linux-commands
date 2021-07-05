@@ -29,3 +29,12 @@ find .  -name 'pom.xml' -exec sed -i -e 's/${buildReleaseVersion}/1.0.0/g' {} \;
 sed -i -e 's/TEXTO_A/TEMP/g' name_file
 
 
+#
+#DOCKER commands
+#First delete containers that are not used.
+docker ps -a | grep -v Up | awk '{ print $1; }' | xargs docker rm
+
+#Delete all containers with none tags.
+docker images | grep none | awk '{ print $3; }' | xargs docker rmi
+
+
