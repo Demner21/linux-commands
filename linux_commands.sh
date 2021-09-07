@@ -16,6 +16,12 @@ grep -rnw '\[02-03-2021 17:41:[[:digit:]]\{2\}\.[[:digit:]]\{1,3\}\] (Handler.ja
 #con este comando se buscará desde la linea 123 deL archivo file.txt hasta la linea 1234 , es necesario colocar la p
 sed -n '123,1234p' file.txt
 
+#para reemplazar en un archivo los espacios en blanco junto a un caracter, por ejemplo:
+# abc      ;1233     ;4     ;09/08/56
+#se convertirá a
+# abc;1233;4;09/08/56
+sed  -i 's/\s*;/;/g' file.txt
+
 #FIND CON SED
 #CON ESTE COMANDO SE BUSCARÁ EN LA CARPETA ACTUAL TODOS LOS ARCHIVOS pom.xml  Y DENTRO DE ELLOS SE BUSCARÁ EL STRING ${buildReleaseVersion}
 #EL CUAL SERÁ REEMPLAZADO POR 1.0.0
